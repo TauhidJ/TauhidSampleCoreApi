@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TauhidSampleCoreApi.Domain.Aggregates;
 using TauhidSampleCoreApi.Domain.Aggregates.ProductAggregate;
+using TauhidSampleCoreApi.Domain.Aggregates;
 using TauhidSampleCoreApi.Domain.Specifications;
 using TauhidSampleCoreApi.Shared.Errors.ProductErrors;
 using TauhidSampleCoreApi.Shared.Models.ProductModels;
@@ -16,6 +16,7 @@ namespace TauhidSampleCoreApi.Applications.Controllers
         {
             _productRepository = productRepository;
         }
+
         /// <summary>
         /// Fetches list of all products 
         /// </summary>
@@ -34,6 +35,7 @@ namespace TauhidSampleCoreApi.Applications.Controllers
                 Price = m.Price
             }));
         }
+
         /// <summary>
         /// Fetch the details of the product by id. 
         /// </summary>
@@ -56,6 +58,7 @@ namespace TauhidSampleCoreApi.Applications.Controllers
                 Price = product.Price
             });
         }
+
         /// <summary>
         /// Creates a product
         /// </summary>
@@ -99,6 +102,7 @@ namespace TauhidSampleCoreApi.Applications.Controllers
             }
             return ValidationProblem(ModelState);
         }
+
         /// <summary>
         /// Update data of selected product id
         /// </summary>
@@ -149,6 +153,7 @@ namespace TauhidSampleCoreApi.Applications.Controllers
             }
             return ValidationProblem(ModelState);
         }
+
         /// <summary>
         /// Delete the  product data by product id 
         /// </summary>
@@ -168,6 +173,5 @@ namespace TauhidSampleCoreApi.Applications.Controllers
 
             return NoContent();
         }
-
     }
 }
