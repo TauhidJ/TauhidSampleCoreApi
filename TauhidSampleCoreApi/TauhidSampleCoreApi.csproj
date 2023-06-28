@@ -20,10 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Applications\DomainEventHandlers\OrderCreated\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TauhidSampleCoreApi.Shared\TauhidSampleCoreApi.Shared.csproj" />
   </ItemGroup>
 

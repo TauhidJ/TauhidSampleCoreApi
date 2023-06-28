@@ -9,6 +9,8 @@ using Zero.ServiceHelper;
 
 namespace TauhidSampleCoreApi.Applications.Controllers
 {
+    [Route("product")]
+    [ApiController]
     public class ProductController : ControllerBase
     {
         private readonly IRepository<Product> _productRepository;
@@ -73,7 +75,7 @@ namespace TauhidSampleCoreApi.Applications.Controllers
         /// </response>
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [HttpPost]
+        [HttpPost("/product")]
         public async Task<IActionResult> PostAsync(ProductRequestModel model, CancellationToken cancellationToken)
         {
             if (ModelState.IsValid)
